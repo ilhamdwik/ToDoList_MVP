@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.todolist_mvp.R;
-import com.example.todolist_mvp.modul.login.LoginFragment;
+import com.example.todolist_mvp.base.BaseFragment;
 
 
 public abstract class BaseActivity extends FragmentActivity implements FragmentListener {
@@ -24,7 +24,7 @@ public abstract class BaseActivity extends FragmentActivity implements FragmentL
 
     protected abstract void initializeView();
 
-    protected void setCurrentFragment(LoginFragment fragment, boolean addToBackStack) {
+    protected void setCurrentFragment(BaseFragment fragment, boolean addToBackStack) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
